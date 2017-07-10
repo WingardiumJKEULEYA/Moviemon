@@ -1,0 +1,9 @@
+<table id="grid">
+	<% 10.times do |y| %>
+		<tr y=<%= y %>>
+			<% 10.times do |x| %>
+				<td x=<%= x %> y=<%= y %> <%= "id='current_position'".html_safe if x == $player['cell_player']['x'] && y == $player['cell_player']['y'] %>></td>
+			<% end %>
+		</tr>
+	<% end %>
+</table>

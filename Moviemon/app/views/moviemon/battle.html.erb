@@ -1,0 +1,18 @@
+<div class="battle">
+	<div class="moviemon">
+		<% if !$game["moviemons"][@id].nil? %>
+			<img src="<%= $game["moviemons"][@id]["Poster"] %>" />
+			<p><strong>Title</strong> : <%= $game["moviemons"][@id]["Title"] %></p>
+			<p><strong>Director</strong> : <%= $game["moviemons"][@id]["Director"] %></p>
+			<p><strong>Moviemon Energy</strong> : <%= $game["moviemons"][@id]["imdbRating"] %></p>
+		<% end %>
+	</div>
+	<div class="player">
+		<% if !$game["moviemons"][@id].nil? %>
+			<p><strong>Player Energy</strong> : <%= $player["player_strength"] %></p>
+		<% end %>
+		<% if @output[1] %>
+		<center><p class="status"><strong><%= @output[1] %></strong></p></center>
+		<% end %>
+	</div>
+</div>

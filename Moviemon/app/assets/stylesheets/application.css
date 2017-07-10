@@ -1,0 +1,116 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@font-face {
+    font-family: gameboy;
+    src: url(gameboy.ttf);
+}
+
+body {
+	font-family: gameboy;
+	font-size: 9px;
+	height: 100%;
+	width: 100%;
+}
+
+.screen-container {
+	display: inline-block;
+	position: absolute;
+	left: 295px;
+	top: 72px;
+	background-color: rgba(0,255,255,0.4);
+	height: 190px;
+	width: 231px;
+	/*font-size: 14px;*/
+}
+
+.bottom_msg {
+	display: inline-block;
+	position: absolute;
+	left: 295px;
+	top: 262px;
+	background-color: rgba(0,255,255,0.4);
+	height: 17px;
+	width: 231px;
+	font-size: 8px;
+}
+
+#current_position {
+	background-image: url('/assets/char.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#grid {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	background-image: url('/assets/bg_map.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+td { 
+	/*border: 1px solid #fff; */
+	color:#fff; 
+    font-size: 12.6px;
+    margin-top: 2px;
+}
+
+#grid tr, #grid td {
+	padding: 0px 6px; 
+}
+
+.moviedex {
+	padding: 10px;
+}
+
+.moviedex img {
+	float: left;
+	width: 50px;
+	padding: 5px;
+}
+
+.moviedex p {
+	margin: 2px 5px;
+}
+
+.moviedex p .plot {
+    height: 85px;
+    overflow: hidden;
+}
+
+.battle {
+	padding: 10px;
+}
+
+.battle .moviemon {
+	min-height: 80px;
+}
+
+.battle img {
+	float: left;
+	width: 50px;
+	padding-right: 5px;
+}
+
+.battle p {
+	margin: 5px 0px;
+}
+
+.battle .player .status {
+	text-align: center;
+}

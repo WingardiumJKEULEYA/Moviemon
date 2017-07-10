@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div class="screen-container">
+		<!-- <h1><%#= @title %></h1> -->
+		<%= yield %>
+	</div>
+	<div class="bottom_msg"><center><%= @output[0] if @output %></center></div>
+	</div>
+	<%= image_tag("GBP.jpg", :alt => "GBP", :usemap => "#gameboy") %>
+
+	<map name="gameboy">
+		<area alt="power" title="power" <%= @controls['power'] %> shape="rect" coords="265,5,300,21" />
+		<area alt="up" title="up" <%= @controls['up'] %> shape="rect" coords="280,358,305,382" />
+		<area alt="left" title="left" <%= @controls['left'] %> shape="rect" coords="253,388,276,412" />
+		<area alt="right" title="right" <%= @controls['right'] %> shape="rect" coords="312,389,333,412" />
+    	<area alt="down" title="down" <%= @controls['down'] %> shape="rect" coords="283,420,305,442" />
+    	<area alt="select" title="select" <%= @controls['select'] %> shape="rect" coords="359,497,390,508" />
+    	<area alt="start" title="start" <%= @controls['start'] %> shape="rect" coords="413,496,445,509" />
+    	<area alt="b" title="b" <%= @controls['b'] %> shape="circle" coords="466,410, 20" disable/>
+    	<area alt="a" title="a" <%= @controls['a'] %> shape="circle" coords="533,390, 20" />
+	</map>
+
+<footer>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</footer>
+
+</body>
+</html>

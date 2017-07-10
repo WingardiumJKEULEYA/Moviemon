@@ -1,0 +1,14 @@
+<% if !$player["moviedex"][@id].nil? %>
+	<div class="moviedex">
+		<img src="<%= $player["moviedex"][@id]["Poster"] %>" />
+		<p><strong>Rating</strong> : <%= $player["moviedex"][@id]["imdbRating"] %></p>
+		<p><strong>Director</strong> : <%= $player["moviedex"][@id]["Director"] %></p>
+		<p><strong>Year</strong> : <%= $player["moviedex"][@id]["Year"] %></p>
+		<p class="plot"><strong>Genre</strong> : <%= $player["moviedex"][@id]["Genre"] %></p>
+		<p><%= $player["moviedex"][@id]["Plot"] %></p>
+	</div>
+<% else %>
+	<% if @output[1] %>
+		<center><p class="status"><strong><%= @output[1] %></strong></p></center>
+	<% end %>
+<% end %>
